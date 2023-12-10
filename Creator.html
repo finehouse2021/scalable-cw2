@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Asset Track</title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  
+  <body>
+
+    <div  class="container">
+
+        <!--Header-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: center;">
+              <h3>Video Share</h3>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+        <!--New Asset Box-->
+        <div class="row align-items-start">
+            <div class="col-2"  ></div>
+
+            <div class="col-8" style="text-align: left;border-bottom:1px solid #222242;">
+              <p>Upload Video</p>
+
+              <form style="font-size: 10pt;" id="newAssetForm">
+                <div class="mb-3">
+                  <label for="Title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="Title">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Publisher" class="form-label">Publisher</label>
+                  <input type="string" class="form-control" id="Publisher">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Producer" class="form-label">Producer</label>
+                  <input type="text" class="form-control" id="Producer">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Genre" class="form-label">Genre</label>
+                  <input type="text" class="form-control" id="Genre">
+                </div>
+
+                <div class="mb-3">
+                  <label for="ageRating" class="form-label">Age Rating</label>
+                  <input type="text" class="form-control" id="ageRating">
+                </div>
+
+                <div class="mb-3">
+                  <label for="UpFile" class="form-label">File to Upload</label>
+                  <input type="file" class="form-control" id="UpFile">
+                </div>
+            
+                <button type="button" id="subNewForm" class="btn btn-primary">Submit</button> <br/><br/>
+                
+              </form>
+            </div>
+
+            <div class="col-2"  ></div>
+        </div>
+
+    </div>
+  
+  </body>
+</html>
