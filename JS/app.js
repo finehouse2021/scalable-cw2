@@ -113,8 +113,10 @@ function getVideo() {
 
 function displayVideos(videos) {
   var items = [];
+  console.log(videos)
 	// Iterate through the returned records and build HTML, incorporating the key values of the record in the data
 	$.each(videos, function (key, val) {
+
 		items.push(
 			"<video width='400' controls><source src='" +
 				BLOB_ACCOUNT +
@@ -133,6 +135,7 @@ function displayVideos(videos) {
 				"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
 		);
 		items.push("publisher: " + val.video["publisher"] + "<br /><br />");
+		items.push("Age Rating: " + val.video["agerating"] + "<br /><br />");
 
 		// Display existing comments and ratings
 		if (val["comments"] && val["comments"].length > 0) {
@@ -150,8 +153,7 @@ function displayVideos(videos) {
 
 		// Add a form for commenting and rating
 		items.push(
-			"<form class='comment-form'  data-video-index=" + val.video["id"] + ">"
-		);
+			"<form class='comment-form'  data-video-index=" + val.video["id"] + ">");
 		items.push("<label for='comment'>Comment:</label>");
 		items.push(
 			"<textarea class='form-control' name='comment' rows='2'></textarea><br />"
